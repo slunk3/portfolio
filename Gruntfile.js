@@ -33,7 +33,7 @@ module.exports = function(grunt){
         script: './bin/www',
         options: {
           args: ['dev'],
-          ext: 'js,hbs',
+          ext: 'js, hbs',
           nodeArgs: ['--debug'],
           callback: function(nodemon){
             nodemon.on('log', function(event){
@@ -44,7 +44,7 @@ module.exports = function(grunt){
             nodemon.on('config:update', function(){
               setTimeout(function(){
                 require('open')('http://localhost:9000');
-              }, 1000);
+              }, 500);
             });
 
             // refreshes browser when server reboots
@@ -52,7 +52,7 @@ module.exports = function(grunt){
               //Delay before server listens on port
               setTimeout(function(){
                 require('fs').writeFileSync('.rebooted', 'rebooted');
-              }, 1000);
+              }, 500);
             });
           },
           env: {

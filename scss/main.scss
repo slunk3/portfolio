@@ -19,23 +19,28 @@ header {
     position: relative;
     text-transform: uppercase;
 
-    &::before {
+    span {
+      font-size: 30px;
+    }
+
+    &::before,
+    &::after {
       background: url('../images/x.jpg') 0 0 no-repeat;
       content: '';
       height: 14px;
       left: 48px;
+      opacity: .55;
       position: absolute;
       top: 0;
       width: 15px;
     }
 
     &::after {
-      background: url('../images/line.jpg') 0 0 no-repeat;
+      background-image: url('../images/line.jpg');
       bottom: 10px;
-      content: '';
       height: 3px;
       left: 22px;
-      position: absolute;
+      top: auto;
       width: 71px;
     }
   }

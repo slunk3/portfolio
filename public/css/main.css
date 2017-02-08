@@ -398,21 +398,23 @@ header {
     padding: 25px 0;
     position: relative;
     text-transform: uppercase; }
-    header h1::before {
+    header h1 span {
+      font-size: 30px; }
+    header h1::before, header h1::after {
       background: url("../images/x.jpg") 0 0 no-repeat;
       content: '';
       height: 14px;
       left: 48px;
+      opacity: .55;
       position: absolute;
       top: 0;
       width: 15px; }
     header h1::after {
-      background: url("../images/line.jpg") 0 0 no-repeat;
+      background-image: url("../images/line.jpg");
       bottom: 10px;
-      content: '';
       height: 3px;
       left: 22px;
-      position: absolute;
+      top: auto;
       width: 71px; }
 
 footer {
