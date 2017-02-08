@@ -25,11 +25,12 @@ header {
 
     &::before,
     &::after {
+      animation-duration: 1s;
+      animation-name: fadein;
       background: url('../images/x.jpg') 0 0 no-repeat;
       content: '';
       height: 14px;
       left: 48px;
-      opacity: .55;
       position: absolute;
       top: 0;
       width: 15px;
@@ -95,6 +96,12 @@ footer {
   right: 10px;
   top: 20px;
   width: 37px;
+
+  &.fade-away {
+    animation-duration: .75s;
+    animation-fill-mode: forwards;
+    animation-name: fadeaway;
+  }
 }
 
 .close-nav {
@@ -105,6 +112,12 @@ footer {
     position: absolute;
     right: 0;
     top: 10px;
+
+    .fade-back {
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-name: fadeback;
+    }
   }
 }
 
@@ -115,7 +128,7 @@ footer {
   justify-content: center;
   left: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
   padding: 50% 0 0;
   position: fixed;
   top: 0;
@@ -187,5 +200,31 @@ section {
       width: 100%;
       z-index: -1;
     }
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: .85; }
+}
+
+@keyframes fadeaway {
+  from { opacity: 1; }
+
+  to {
+    opacity: 0;
+    top: -10px;
+  }
+}
+
+@keyframes fadeback {
+  from {
+    opacity: 0;
+    top: -10px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
   }
 }

@@ -1,11 +1,15 @@
 $(document).ready(function(){
   $('.trigger-nav').click(function(e){
     e.preventDefault();
-    $('.main-nav').css('display', 'block');
+    self = $(this);
+    $('.main-nav').fadeIn();
+    $(self).addClass('fade-away');
   });
 
   $('.close-nav a').click(function(e){
-    $('.main-nav').css('display', 'none');
+    e.preventDefault();
+    $('.main-nav').fadeOut();
+    $('.trigger-nav').removeClass('fade-away').addClass('fade-back');
   });
 
   var titleHtml = document.querySelector('.title a');
