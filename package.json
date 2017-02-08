@@ -1,0 +1,47 @@
+{
+  "author": "Nick Boyd (nick@nickboyd.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slunk3/portfolio/issues"
+  },
+  "homepage": "https://github.com/slunk3/portfolio#readme",
+  "name": "nbp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "hbs": "^4.0.1",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "bourbon": "^4.3.0",
+    "bourbon-neat": "^1.8.0",
+    "chai": "^3.5.0",
+    "grunt": "^1.0.1",
+    "grunt-cafe-mocha": "^0.1.13",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-nodemon": "^0.4.2",
+    "grunt-open": "^0.2.3",
+    "grunt-reload": "^0.2.0",
+    "grunt-sass": "^2.0.0",
+    "load-grunt-tasks": "^3.5.2",
+    "mocha": "^3.2.0",
+    "reload": "^1.1.1"
+  },
+  "description": "Nick Boyd portfolio site",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slunk3/portfolio.git"
+  }
+}

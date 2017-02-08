@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    {{#if showTests}}
+      <link rel="stylesheet" href="/vendor/mocha.css">
+    {{/if}}
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Roboto" rel="stylesheet">
+    <link rel='stylesheet' href='/css/main.css' />
+  </head>
+  <body>
+    {{{body}}}
+    <script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="/js/main.js" charset="utf-8"></script>
+    {{#if showTests}}
+      <div id="mocha"></div>
+      <script src="/vendor/mocha.js" charset="utf-8"></script>
+      <script src="/vendor/chai.js" charset="utf-8"></script>
+      <script type="text/javascript">
+        mocha.ui('tdd');
+        var assert = chai.assert;
+      </script>
+      <script src="/qa/tests-global.js" charset="utf-8"></script>
+      {{#if pageTestScript}}
+        <script src="{{pageTestScript}}" charset="utf-8"></script>
+      {{/if}}
+      <script type="text/javascript">
+        mocha.run();
+      </script>
+    {{/if}}
+  </body>
+</html>
