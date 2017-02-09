@@ -1,32 +1,48 @@
 {{>header}}
 <div class="wrapper">
-  {{#if subtitle}}
-    <h2>{{subtitle}}</h2>
-  {{/if}}
-  <p>Nick Boyd is a UI developer and is awesome. For the past ten years he's
-    worked for some of the UK's best digital agencies; producing award–winning
-    work wherever he's been.</p>
-  <p>Working with some of the biggest brands for leading companies and blah blah
-    blah blah blah.</p>
-  <div class="col">
-    <h3>Interests</h3>
-    <ul>
-      <li>Cinephilia</li>
-      <li>Film scores</li>
-      <li>Reading</li>
-      <li>Dogs</li>
-    </ul>
-  </div>
-  <div class="col">
-    <h3>Skills</h3>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS/SCSS</li>
-      <li>JS</li>
-      <li>jQuery</li>
-      <li>Node.js</li>
-      <li>Adobe Photoshop</li>
-    </ul>
-  </div>
+  <section class="profile">
+    {{#if subtitle}}
+      <h2>{{subtitle}}</h2>
+    {{/if}}
+    <p>Nick Boyd is a UI developer and is awesome. For the past ten years he's
+      worked for some of the UK's best digital agencies; producing award–winning
+      work wherever he's been.</p>
+    <p>Working with some of the biggest brands for leading companies and blah blah
+      blah blah blah.</p>
+    <div class="col">
+      <h3>Interests</h3>
+      <ul>
+        <li>Cinephilia</li>
+        <li>Charcuterie</li>
+        <li>Reading</li>
+        <li>Space-Time</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h3>Skills</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS/SCSS</li>
+        <li>JS</li>
+        <li>jQuery</li>
+        <li>Node.js</li>
+        <li>Adobe Photoshop</li>
+      </ul>
+    </div>
+  </section>
+  <section class="contact">
+    {{#if subtitle}}
+      <h2>{{subtitle}}</h2>
+    {{/if}}
+    <div>
+      <p>Email <br>nick@nickboyd.com</p>
+    </div>
+    <div>
+      <p>Twitter <br><a href="http://twitter.com/_nickboyd">@_nickboyd</a></p>
+    </div>
+    <div>
+      <p>Resume <br><a href="#">By request</a></p>
+    </div>
+  </section>
 </div>
 {{>footer}}

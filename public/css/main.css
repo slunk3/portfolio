@@ -362,9 +362,9 @@ th {
 
 body {
   background-color: #fcfcfc;
-  color: #222;
+  color: #404040;
   font-family: "Roboto", "Helvetica", "Open Sans", sans-serif;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 300; }
 
 a {
@@ -373,11 +373,8 @@ a {
   a :hover {
     text-decoration: underline; }
 
-main a {
-  font-size: 12px; }
-
 p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6; }
 
 h1,
@@ -500,10 +497,29 @@ footer {
     clear: both; }
 
 section {
-  margin-top: 50px; }
+  margin-bottom: 50px; }
+  section::before, section::after {
+    content: '';
+    display: table; }
+  section::after {
+    clear: both; }
+  section .col {
+    float: left;
+    width: 50%; }
+    section .col h3 {
+      font-size: 18px;
+      margin: 8px 0;
+      padding-bottom: 0; }
+    section .col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      section .col ul li {
+        font-size: 13px;
+        margin-bottom: 6px; }
   section h2 {
-    font-size: 18px;
-    padding-left: 20px;
+    font-size: 20px;
+    padding-left: 30px;
     position: relative; }
     section h2::before {
       background-color: #c3c2ae;
@@ -511,13 +527,18 @@ section {
       height: 9px;
       left: 5px;
       position: absolute;
-      top: 8px;
+      top: 10px;
       transform: rotate(45deg);
       width: 9px; }
   section article {
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: block;
+    height: 355px;
     margin-bottom: 30px;
-    position: relative; }
+    position: relative;
+    width: 100%; }
     section article h3,
     section article p {
       color: #fcfcfc;
@@ -534,10 +555,40 @@ section {
       left: 0;
       position: absolute;
       width: 100%; }
+      section article footer p {
+        font-size: 11px; }
     section article img {
       height: auto;
       width: 100%;
       z-index: -1; }
+  @media screen and (min-width: 1080px) {
+    section.about {
+      float: left;
+      margin-right: 5%;
+      width: 40%; } }
+  @media screen and (min-width: 1080px) {
+    section.contact {
+      float: left;
+      margin-right: 5%;
+      width: 40%; } }
+  section.contact div {
+    float: left;
+    width: 50%; }
+  @media screen and (min-width: 1080px) {
+    section.work {
+      float: left;
+      width: 100%; } }
+  section.work article {
+    border-top: 2px solid #222; }
+    @media screen and (min-width: 736px) {
+      section.work article {
+        float: left;
+        margin: 0 4% 50px 0;
+        width: 46%; } }
+
+@media screen and (max-width: 736px) {
+  .hide-sm {
+    display: none; } }
 
 @keyframes fadein {
   from {

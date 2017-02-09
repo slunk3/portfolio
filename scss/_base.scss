@@ -2,9 +2,9 @@
 
 body {
   background-color: $white;
-  color: $black;
+  color: $gray;
   font-family: $font-stack-sans;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 300;
 }
 
@@ -17,14 +17,8 @@ a {
   }
 }
 
-main {
-  a {
-    font-size: 12px;
-  }
-}
-
 p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
